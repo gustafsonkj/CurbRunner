@@ -30,4 +30,9 @@ public class PlayerController : MonoBehaviour {
 
         transform.Translate(new Vector3(Input.acceleration.x, 0, 0) * Time.deltaTime * speed);
 	}
+
+    void OnTriggerExit(Collider other)
+    {
+        Destroy(other.gameObject);
+    } 
 }
