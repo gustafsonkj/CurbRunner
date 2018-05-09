@@ -14,6 +14,7 @@ public class CurbSpawner : MonoBehaviour {
 	
 	void Update ()
     {
+        spawnPosition = new Vector3(spawnPosition.x + 20f, spawnPosition.y, spawnPosition.z);
         Instantiate(curb, spawnPosition, Quaternion.identity);
 	}
 }
